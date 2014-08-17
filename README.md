@@ -2,7 +2,7 @@
 
 Start developing React JS applications easily with the included tooling. Using gulp with browserify and karma for testing.
 
-*Based on the [boilerplate](https://github.com/iamrandys/react-component-boilerplate) built originally forked by Tyrone Michael Avnit*
+*Based on the [boilerplate](https://github.com/iamrandys/react-component-boilerplate) originally forked by Tyrone Michael Avnit*
 
 ### Install
 
