@@ -8,11 +8,11 @@ Start developing React JS applications easily with the included tooling. Using g
 
 * Clone the repo
 * Run `npm install`
-* Open `build/index.html` or run `python -m SimpleHTTPServer` in the `build` folder
+* Open `build/index.html` or run `python -m SimpleHTTPServer` in the `dev` folder
 
 ### Development
 * Run `gulp`
-* Any changes to `app` or `styles` folder will automatically rebuild to `build` folder
+* Any changes to `app` or `styles` folder will automatically rebuild to `dev` folder
 
 ### Tests
 * Run `gulp test -'./tests/App-test.js'
