@@ -31,7 +31,7 @@ PhantomJS, either change `karma.conf.js` to use PhantomJS or manually start it w
 
 ### Directory
 * **app/**: Where you develop the application
-* **dev/**: Where your automatically builds to. This is where you launch your app in development
+* **dev/**: Where your app automatically builds to. This is where you launch your app in development
 * **dist/**: Where the deployed code exists, ready for production
 * **utils/**: Gulp tasks and other utils
 * **styles/**: Where you put your css files
