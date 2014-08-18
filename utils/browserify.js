@@ -16,8 +16,16 @@ var gulpif = require('gulp-if');
 var path = require('path');
 var uglify = require('gulp-uglify');
 var streamify = require('gulp-streamify');
+var notify = require('gulp-notify');
 
 var handleError = require('./handleError');
+
+var getTimeStamp = function () {
+    var date = new Date();
+    var hours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours();
+    var minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
+    return hours + ':' + minutes;
+};
 
 var runBrowserify = function (options) {
 
@@ -28,13 +36,18 @@ var runBrowserify = function (options) {
         cache: {}, packageCache: {}, fullPaths: true
     });
     var rebundle = function() {
+        console.log('[' + getTimeStamp() + '] Building');
+        var start = Date.now();
         var fileName = path.basename(options.src);
         bundler.bundle()
         .on('error', handleError('Browserify'))
         .pipe(source(options.isTest ? 'test.js' : fileName))
         .pipe(gulpif(options.uglify, streamify(uglify())))
         .pipe(gulp.dest(options.dest))
-        .pipe(gulpif(options.isTest, livereload()));
+        .pipe(gulpif(options.isTest, livereload()))
+        .pipe(notify(function () {
+            console.log('[' + getTimeStamp() + '] Built in ' + (Date.now() - start) + 'ms');
+        }));
     };
 
     if (options.isTest) {
