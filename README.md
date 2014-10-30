@@ -2,7 +2,7 @@
 
 Start developing React JS applications easily with the included tooling. Using gulp with browserify and jasmine for testing.
 
-Read more about how it works at: []()
+Read more about how it works at: [React JS workflow, part 2](http://christianalfoni.github.io/javascript/2014/10/30/react-js-workflow-part2.html)
 
 ### Install
 
