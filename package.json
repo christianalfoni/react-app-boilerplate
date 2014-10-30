@@ -1,11 +1,7 @@
 {
   "name": "react-app-boilerplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "React application boilerplate",
-  "main": "gulp",
-  "scripts": {
-    "test": "./node_modules/karma/bin/karma start karma.conf.js"
-  },
   "author": "Christian Alfoni",
   "license": "ISC",
   "devDependencies": {

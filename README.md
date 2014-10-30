@@ -22,7 +22,6 @@ Read more about how it works at: []()
 * Run `gulp deploy`
 
 ### Directory
-* **app/**: Where you develop the application
 * **build/**: Where your automatically builds to. This is where you launch your app in development
 * **dist/**: Where the deployed code exists, ready for production
 * **styles/**: Where you put your css files
