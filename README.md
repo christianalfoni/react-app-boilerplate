@@ -19,8 +19,8 @@ Read more about how it works at: [React JS workflow, part 2](http://christianalf
 
 ### Development
 * Run `gulp`
-* Go to `localhost:3000` to display the app
-* Go to `localhost:3000/testrunner.html` to see your tests
+* Go to `localhost:8000` to display the app
+* Go to `localhost:8000/testrunner.html` to see your tests
 * Any changes to `app` or `styles` folder will automatically rebuild to `build` folder
 * By downloading [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) extension you can autoreload the browser on application and test changes
 * Run `gulp test` to run all tests with phantomJS and produce XML reports
