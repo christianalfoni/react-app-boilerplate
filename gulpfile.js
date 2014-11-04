@@ -126,10 +126,16 @@ var browserifyTask = function (options) {
 
 var cssTask = function (options) {
     if (options.development) {
-      var run = function () {
+      var run = function (events, done) {
+        var start = new Date();
+        console.log('Building CSS bundle');
         gulp.src(options.src)
           .pipe(concat('main.css'))
           .pipe(gulp.dest(options.dest));
+          .pipe(notify(function () {
+            console.log('CSS bundle built in ' + (Date.now() - start) + 'ms');
+            done && done();
+          }));
       };
       run();
       gulp.watch(options.src, run);
