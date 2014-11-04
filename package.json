@@ -1,11 +1,11 @@
 {
   "name": "react-app-boilerplate",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "React application boilerplate",
   "author": "Christian Alfoni",
   "license": "ISC",
   "devDependencies": {
-    "browserify": "^5.9.3",
+    "browserify": "^6.2.0",
     "glob": "^4.0.6",
     "gulp": "^3.8.7",
     "gulp-concat": "^2.3.4",
@@ -20,9 +20,9 @@
     "gulp-shell": "^0.2.10",
     "phantomjs": "^1.9.12",
     "react-addons": "^0.9.0",
-    "reactify": "^0.14.0",
+    "reactify": "^0.15.2",
     "vinyl-source-stream": "^0.1.1",
-    "watchify": "^1.0.2"
+    "watchify": "^2.1.1"
   },
   "dependencies": {
     "react": "^0.12.0"

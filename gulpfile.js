@@ -38,7 +38,7 @@ var browserifyTask = function (options) {
 	});
 
   // The rebundle process
-  var rebundle = function (events, done) {
+  var rebundle = function () {
     var start = Date.now();
     console.log('Building APP bundle');
     appBundler.bundle()
@@ -49,7 +49,6 @@ var browserifyTask = function (options) {
       .pipe(gulpif(options.development, livereload()))
       .pipe(notify(function () {
         console.log('APP bundle built in ' + (Date.now() - start) + 'ms');
-        done && done();
       }));
   };
 
@@ -79,7 +78,7 @@ var browserifyTask = function (options) {
 			testBundler.external(dep);
 		});
 
-  	var rebundleTests = function (events, done) {
+  	var rebundleTests = function () {
   		var start = Date.now();
   		console.log('Building TEST bundle');
   		testBundler.bundle()
@@ -89,7 +88,6 @@ var browserifyTask = function (options) {
 	      .pipe(livereload())
 	      .pipe(notify(function () {
 	        console.log('TEST bundle built in ' + (Date.now() - start) + 'ms');
-          done && done();
 	      }));
   	};
 
@@ -126,15 +124,15 @@ var browserifyTask = function (options) {
 
 var cssTask = function (options) {
     if (options.development) {
-      var run = function (events, done) {
+      var run = function () {
+        console.log(arguments);
         var start = new Date();
         console.log('Building CSS bundle');
         gulp.src(options.src)
           .pipe(concat('main.css'))
-          .pipe(gulp.dest(options.dest));
+          .pipe(gulp.dest(options.dest))
           .pipe(notify(function () {
             console.log('CSS bundle built in ' + (Date.now() - start) + 'ms');
-            done && done();
           }));
       };
       run();

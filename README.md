@@ -12,6 +12,14 @@ Read more about how it works at: [React JS workflow, part 2](http://christianalf
 
 ### Changes
 
+**2.2.1**
+
+  - Updated package.json dep versions
+
+**2.2.0**
+
+  - Using gulp-watch instead of gulp.watch, now reacts to adding and deleting files
+
 **2.1.0**
 
   - Fixed watch bug
