@@ -10,6 +10,13 @@ Read more about how it works at: [React JS workflow, part 2](http://christianalf
 * Run `npm install`
 * Start a webservice in the `build` folder, f.ex. `python -m SimpleHTTPServer`
 
+### Changes
+
+**2.1.0**
+
+  - Fixed watch bug
+  - Deploy does not include react-addons
+
 ### Development
 * Run `gulp`
 * Go to `localhost:3000` to display the app

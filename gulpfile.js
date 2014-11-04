@@ -38,7 +38,7 @@ var browserifyTask = function (options) {
 	});
 
   // The rebundle process
-  var rebundle = function () {
+  var rebundle = function (events, done) {
     var start = Date.now();
     console.log('Building APP bundle');
     appBundler.bundle()
@@ -49,6 +49,7 @@ var browserifyTask = function (options) {
       .pipe(gulpif(options.development, livereload()))
       .pipe(notify(function () {
         console.log('APP bundle built in ' + (Date.now() - start) + 'ms');
+        done && done();
       }));
   };
 
@@ -78,7 +79,7 @@ var browserifyTask = function (options) {
 			testBundler.external(dep);
 		});
 
-  	var rebundleTests = function () {
+  	var rebundleTests = function (events, done) {
   		var start = Date.now();
   		console.log('Building TEST bundle');
   		testBundler.bundle()
@@ -88,12 +89,19 @@ var browserifyTask = function (options) {
 	      .pipe(livereload())
 	      .pipe(notify(function () {
 	        console.log('TEST bundle built in ' + (Date.now() - start) + 'ms');
+          done && done();
 	      }));
   	};
 
     testBundler = watchify(testBundler);
     testBundler.on('update', rebundleTests);
     rebundleTests();
+
+    // Remove react-addons when deploying, as it is only for
+    // testing
+    if (!options.development) {
+      dependencies.splice(dependencies.indexOf('react-addons'), 1);
+    }
 
     var vendorsBundler = browserify({
       debug: true,
