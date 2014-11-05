@@ -8,7 +8,6 @@ Read more about how it works at: [React JS workflow, part 2](http://christianalf
 
 * Clone the repo
 * Run `npm install`
-* Start a webservice in the `build` folder, f.ex. `python -m SimpleHTTPServer`
 
 ### Changes
 
@@ -27,6 +26,7 @@ Read more about how it works at: [React JS workflow, part 2](http://christianalf
 
 ### Development
 * Run `gulp`
+* Start a webservice in the `build` folder, f.ex. `python -m SimpleHTTPServer`
 * Go to `localhost:8000` to display the app
 * Go to `localhost:8000/testrunner.html` to see your tests
 * Any changes to `app` or `styles` folder will automatically rebuild to `build` folder
