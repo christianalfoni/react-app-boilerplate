@@ -11,6 +11,9 @@ Read more about how it works at: [React JS workflow, part 2](http://christianalf
 
 ### Changes
 
+**2.2.2**
+  - Added es5 shim to testrunner-phantom.js html as phantomJS does not have bind etc.
+
 **2.2.1**
 
   - Updated package.json dep versions
