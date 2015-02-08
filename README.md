@@ -37,7 +37,7 @@ Read more about how it works at: [React JS workflow, part 2](http://christianalf
 * Run `gulp test` to run all tests with phantomJS and produce XML reports
 
 ### Minify the code, ready for production
-* Run `gulp deploy`
+* Run `NODE_ENV=production gulp deploy`
 
 ### Directory
 * **build/**: Where your automatically builds to. This is where you launch your app in development
