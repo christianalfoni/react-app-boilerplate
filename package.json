@@ -19,12 +19,11 @@
     "gulp-jasmine2-phantomjs": "^0.1.1",
     "gulp-shell": "^0.2.10",
     "phantomjs": "^1.9.12",
-    "react-addons": "^0.9.0",
     "reactify": "^0.15.2",
     "vinyl-source-stream": "^0.1.1",
     "watchify": "^2.1.1"
   },
   "dependencies": {
-    "react": "^0.12.0"
+    "react": "^0.13.1"
   }
 }
