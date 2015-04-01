@@ -14,6 +14,9 @@ The boilerplate is minimalistic, meaning you have to expand on the current workf
 
 ### Changes
 
+**2.2.3**
+  - Now works with React 0.13.1 (Thanks to @fatso83)
+
 **2.2.2**
   - Added es5 shim to testrunner-phantom.js html as phantomJS does not have bind etc.
 
