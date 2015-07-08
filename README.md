@@ -35,9 +35,8 @@ The boilerplate is minimalistic, meaning you have to expand on the current workf
 
 ### Development
 * Run `gulp`
-* Start a webservice in the `build` folder, f.ex. `python -m SimpleHTTPServer`
-* Go to `localhost:8000` to display the app
-* Go to `localhost:8000/testrunner.html` to see your tests
+* Go to `localhost:8889` to display the app
+* Go to `localhost:8889/testrunner.html` to see your tests
 * Any changes to `app` or `styles` folder will automatically rebuild to `build` folder
 * Both tests and application changes will refresh automatically in the browser
 * Run `gulp test` to run all tests with phantomJS and produce XML reports
