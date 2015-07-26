@@ -14,6 +14,7 @@ var shell = require('gulp-shell');
 var glob = require('glob');
 var livereload = require('gulp-livereload');
 var jasminePhantomJs = require('gulp-jasmine2-phantomjs');
+var connect = require('gulp-connect');
 
 // External dependencies you do not want to rebundle while developing,
 // but include in your application deployment
@@ -159,6 +160,11 @@ gulp.task('default', function () {
     src: './styles/**/*.css',
     dest: './build'
   });
+
+  connect.server({
+        root: 'build/',
+        port: 8889
+    });
 
 });
 

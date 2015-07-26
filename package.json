@@ -9,6 +9,7 @@
     "glob": "^4.0.6",
     "gulp": "^3.8.9",
     "gulp-concat": "^2.3.4",
+    "gulp-connect": "^2.2.0",
     "gulp-cssmin": "^0.1.6",
     "gulp-if": "^1.2.4",
     "gulp-jasmine2-phantomjs": "^0.1.1",
