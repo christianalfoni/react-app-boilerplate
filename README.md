@@ -34,7 +34,7 @@ The boilerplate is minimalistic, meaning you have to expand on the current workf
   - Deploy does not include react-addons
 
 ### Development
-* Run `gulp`
+* Run `NODE_ENV=development gulp`
 * Go to `localhost:8889` to display the app
 * Go to `localhost:8889/testrunner.html` to see your tests
 * Any changes to `app` or `styles` folder will automatically rebuild to `build` folder
