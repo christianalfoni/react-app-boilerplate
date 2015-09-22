@@ -148,6 +148,7 @@ var cssTask = function (options) {
 
 // Starts our development workflow
 gulp.task('default', function () {
+  livereload.listen();
 
   browserifyTask({
     development: true,
