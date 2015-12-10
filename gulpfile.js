@@ -34,9 +34,9 @@ var browserifyTask = function (options) {
 	});
 
 	// We set our dependencies as externals on our app bundler when developing		
-	(options.development ? dependencies : []).forEach(function (dep) {
-		appBundler.external(dep);
-	});
+  if (options.development) {
+    appBundler.external(dependencies);
+  }
 
   // The rebundle process
   var rebundle = function () {
@@ -75,9 +75,7 @@ var browserifyTask = function (options) {
 			cache: {}, packageCache: {}, fullPaths: true // Requirement of watchify
 		});
 
-		dependencies.forEach(function (dep) {
-			testBundler.external(dep);
-		});
+		testBundler.external(dependencies);
 
   	var rebundleTests = function () {
   		var start = Date.now();
@@ -95,12 +93,6 @@ var browserifyTask = function (options) {
     testBundler = watchify(testBundler);
     testBundler.on('update', rebundleTests);
     rebundleTests();
-
-    // Remove react-addons when deploying, as it is only for
-    // testing
-    if (!options.development) {
-      dependencies.splice(dependencies.indexOf('react-addons'), 1);
-    }
 
     var vendorsBundler = browserify({
       debug: true,
@@ -163,9 +155,9 @@ gulp.task('default', function () {
   });
 
   connect.server({
-        root: 'build/',
-        port: 8889
-    });
+    root: 'build/',
+    port: 8889
+  });
 
 });
 
