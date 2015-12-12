@@ -1,4 +1,5 @@
 /** @jsx React.DOM */
 var React = require('react');
+var ReactDOM = require('react-dom');
 var App = require('./App.js');
-React.render(<App/>, document.body);
+ReactDOM.render(<App/>, document.body);
