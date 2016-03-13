@@ -5,6 +5,8 @@
   "author": "Christian Alfoni",
   "license": "ISC",
   "devDependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
     "browserify": "^10.2.1",
     "glob": "^4.0.6",
     "gulp": "^3.8.9",
@@ -20,7 +22,6 @@
     "gulp-uglify": "^0.3.1",
     "gulp-util": "^3.0.0",
     "phantomjs": "^1.9.12",
-    "reactify": "^0.15.2",
     "vinyl-source-stream": "^0.1.1",
     "watchify": "^2.1.1"
   },
