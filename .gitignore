@@ -1,6 +1,11 @@
 node_modules
+TEST-App.xml
+npm-debug.log
+
+# Build artifacts
+dist/main.js
+dist/main.css
+build/main.css
 build/main.js
 build/specs.js
 build/vendors.js
-TEST-App.xml
-npm-debug.log
